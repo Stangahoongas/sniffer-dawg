@@ -31,7 +31,7 @@ function preload() {
     heckbrickImg = loadImage('brick2.png');
     heckwallImg = loadImage('wall2.png');
     iceImg = loadImage('ice block.png');
-    music = loadSound('backgrouynd music.mp3');
+   // music = loadSound('backgrouynd music.mp3');
     jump = loadSound('jump.mp3');
     foodImg = loadImage('food.png');
 
@@ -150,9 +150,9 @@ function setup(){
  displayMode('centered');
  world.gravity.y = 30;
 
- window.addEventListener('keydown', startMusic);
- window.addEventListener('mousedown', startMusic);
- music.setVolume(0.5);
+// window.addEventListener('keydown', startMusic);
+// window.addEventListener('mousedown', startMusic);
+// music.setVolume(0.5);
 
  ball = new Sprite(200,1830);
  ball.friction = 0;
@@ -334,16 +334,16 @@ function checkCollisions() {
 }
 
 
-function startMusic() {
-    if (!musicStarted) {
-        music.play(); // Start music
-        musicStarted = true;
-
+//function startMusic() {
+//    if (!musicStarted) {
+//        music.play(); // Start music
+//        musicStarted = true;
+//
         // Remove event listeners once music has started
-        window.removeEventListener('keydown', startMusic);
-        window.removeEventListener('mousedown', startMusic);
-    }
-}
+//        window.removeEventListener('keydown', startMusic);
+   //     window.removeEventListener('mousedown', startMusic);
+ //   }
+//}
 
 function endGame() {
     isGameOver = true; // Set the game over state
